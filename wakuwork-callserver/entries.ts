@@ -13,8 +13,8 @@ export const prefetcher: Prefetcher = async (path) => {
   switch (path) {
     case "/":
       return {
-        entryItems: [["App", { name: "Wakuwork" }]],
-        clientModules: [],
+        entryItems: [["App", { name: "COW iO" }]],
+        clientModules: [(await import("./src/UsersSearch.js")).UsersSearch],
       };
     default:
       return {};
@@ -23,7 +23,7 @@ export const prefetcher: Prefetcher = async (path) => {
 
 export const prerenderer: Prerenderer = async () => {
   return {
-    entryItems: [["App", { name: "Customer" }]],
+    entryItems: [["App", { name: "Wakuwork" }]],
     paths: ["/"],
   };
 };
